@@ -7,24 +7,24 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-emily = User.create!(username: "emily", email: "e@ge", phoneNumber: "078510123123", address: "133 big house, london road, london, N145T ")
+emily = User.create!(username: "emily", email: "e@ge", phoneNumber: "078510123123", address: "133 big house, london road, london, N145T", password: "p", password_confirmation: "p")
 
-ajay = User.create!(username: "ajay", email: "aj@aj", phoneNumber: "078510124124", address: "134 big house, london road, london, N145T")
+ajay = User.create!(username: "ajay", email: "aj@aj", phoneNumber: "078510124124", address: "134 big house, london road, london, N145T", password: "p", password_confirmation: "p")
 
-mike = User.create!(username: "mike", email: "m@m", phoneNumber: "078510125125", address: "135 big house, london road, london, N145T")
+mike = User.create!(username: "mike", email: "m@m", phoneNumber: "078510125125", address: "135 big house, london road, london, N145T", password: "p", password_confirmation: "p")
 
-Advert.create!(title: "Bicycle", body: "I'm looking for a mens racing bike, maybe in blue.", user: ajay, valueMin: 100.00, valueMax: 150.00)
+advert1 = Advert.create!(title: "Bicycle", body: "I'm looking for a mens racing bike, maybe in blue.", user: ajay, valueMin: 100.00, valueMax: 150.00)
 
 Advert.create!(title: "Blender", body: "I need a new blender, top of the range", user: emily, valueMin: 25.00, valueMax: 50.00)
 
 
 offer1 = Offer.create!(title: "Bicycle", body: "I'm selling a beautiful 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.", user: mike, value: 145, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
 
-offer1;
-
 Message.create!(
   subject: "I saw you wanted a bicycle",
   body: "personal type message",
   sender_id: mike.id,
-  reciever_id: ajay.id
+  reciever_id: ajay.id,
+  advert_id: advert1.id,
+  offer_id: offer1.id
 )
