@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  body: MyString
+  user: one
+  valueMax: 1.5
+  valueMin: 1.5
+
+two:
+  title: MyString
+  body: MyString
+  user: two
+  valueMax: 1.5
+  valueMin: 1.5
