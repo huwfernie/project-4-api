@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170413150855) do
+ActiveRecord::Schema.define(version: 20170415062450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "adverts", force: :cascade do |t|
+    t.string   "title"
+    t.string   "body"
+    t.integer  "user_id"
+    t.float    "valueMax"
+    t.float    "valueMin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_adverts_on_user_id", using: :btree
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string   "subject"
+    t.text     "body"
+    t.integer  "sender_id"
+    t.integer  "reciever_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "offers", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "user_id"
+    t.float    "value"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_offers_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
@@ -24,4 +55,6 @@ ActiveRecord::Schema.define(version: 20170413150855) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "adverts", "users"
+  add_foreign_key "offers", "users"
 end
