@@ -1,5 +1,5 @@
 class AuthenticationsController < ApplicationController
-  skip_before_action :authenticate_user!
+  # skip_before_action :authenticate_user!
 
   def register
     user = User.new(user_params)
@@ -22,6 +22,6 @@ class AuthenticationsController < ApplicationController
 
   private
   def user_params
-    Hash.new.merge! params.slice(:username, :email, :password, :password_confirmation)
+    Hash.new.merge! params.slice(:username, :email, :address, :phoneNumber, :password, :password_confirmation)
   end
 end
