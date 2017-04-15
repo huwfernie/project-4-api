@@ -1,3 +1,3 @@
 class AdvertSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :title, :body, :user_id, :valueMax, :valueMin
 end
