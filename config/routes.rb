@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   scope :api do
+    get 'offers/search', to: 'offers#search'
     resources :messages
     resources :offers
     resources :adverts
