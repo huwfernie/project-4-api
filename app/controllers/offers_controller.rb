@@ -7,14 +7,14 @@ class OffersController < ApplicationController
 
     render json: @offers
   end
+  
   # This is Huws search method
   def search
-    p 'is this working'
     # @results = Offer.where("title ILIKE 'Bicycle'")
-    @results = Offer.where("title ILIKE ?", params[:search])
+    @results = Offer.where("title ILIKE ? AND value < ? and value > ?", params[:search], (params[:valueMax]).to_i, (params[:valueMin]).to_i)
     render json: @results
   end
-  # This is back to the working Rails below.
+  # This is back to the normal Rails api below.
 
   # GET /offers/1
   def show
