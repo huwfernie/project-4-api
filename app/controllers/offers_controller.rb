@@ -7,12 +7,13 @@ class OffersController < ApplicationController
 
     render json: @offers
   end
-  
+
   # This is Huws search method
   def search
-    # @results = Offer.where("title ILIKE 'Bicycle'")
-    @results = Offer.where("title ILIKE ? AND value < ? and value > ?", params[:search], (params[:valueMax]).to_i, (params[:valueMin]).to_i)
-    render json: @results
+    max = (params[:valueMax] || 1_000_000).to_i
+    min = (params[:valueMin] || 0).to_i
+    @offers = Offer.where("title ILIKE :search AND value <= :max AND value >= :min", { search: "%#{params[:search]}%", max: max, min: min })
+    render json: @offers
   end
   # This is back to the normal Rails api below.
 
