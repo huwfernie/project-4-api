@@ -1,4 +1,5 @@
 class OffersController < ApplicationController
+  skip_before_action :authenticate_user!
   before_action :set_offer, only: [:show, :update, :destroy]
 
   # GET /offers

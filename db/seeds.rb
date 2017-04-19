@@ -30,15 +30,22 @@ Advert.create!(title: "Blender", body: "I need a new blender, top of the range",
 
 # Offers -- things for sale ------------------------
 
-# offer1 = Offer.create!(title: "Bicycle", body: "I'm selling a standard 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.", user: mike, value: 145, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
-#
-# Offer.create!(title: "Bicycle", body: "I'm selling a cheap 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.", user: mike, value: 90, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
-#
-# Offer.create!(title: "Bicycle", body: "I'm selling an expensive beautiful 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.", user: mike, value: 200, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
-#
-# Offer.create!(title: "bicycle", body: "I'm selling a lowercase 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.", user: mike, value: 190, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
-#
-# Offer.create!(title: "Blender that looks like a bicycle", body: "A blender that looks like a BIKE, I wonder if this will show up in any search results.", user: mike, value: 100, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
+offer1 = Offer.create!(title: "Bicycle", body: "I'm selling a standard 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.", user: mike, value: 145, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
+
+Offer.create!(title: "Bicycle", body: "I'm selling a cheap 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.", user: mike, value: 90, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
+
+Offer.create!(title: "Bicycle", body: "I'm selling an expensive beautiful 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.", user: mike, value: 200, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
+
+Offer.create!(title: "bicycle", body: "I'm selling a lowercase 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.", user: mike, value: 190, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
+
+Offer.create!(title: "Blender that looks like a bicycle", body: "A blender that looks like a BIKE, I wonder if this will show up in any search results.", user: mike, value: 100, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
+
+Offer.create!(		"title": "Bicycle",
+		"body": "I'm Mike and I'm selling my bike",
+		"user_id": mike,
+		"value": 125.0,
+		"image": "http://www.gioiosa.it/fileadmin/images/Active/Mountainbike/Mountainbike01.jpg",
+		"messages": [])
 #
 # Message.create!(
 #   subject: "I saw you wanted a bicycle",
