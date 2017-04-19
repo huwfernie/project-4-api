@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
+    # put something here so that you can only return your own user profile
     render json: @user
   end
 
