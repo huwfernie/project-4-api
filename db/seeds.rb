@@ -22,7 +22,7 @@ advert1 = Advert.create!(title: "Bicycle", body: "I'm looking for a mens racing 
 
 Advert.create!(title: "Bicycle", body: "I'm looking for a mens racing bike, maybe in blue, but super cheap", user: emily, valueMin: 75.00, valueMax: 90.00)
 
-Advert.create!(title: "Blender", body: "I'm NEED A BLENDER!!!!!!.", user: mike, valueMin: 1, valueMax: 15)
+Advert.create!(title: "Blender", body: "I NEED A BLENDER!!!!!!.", user: mike, valueMin: 1, valueMax: 15)
 
 Advert.create!(title: "bicycle", body: "I'm looking for one of those lower case bikes that used to be all the rage.", user: will, valueMin: 100.00, valueMax: 150.00)
 
