@@ -37,7 +37,7 @@ class OffersController < ApplicationController
 
   # PATCH/PUT /offers/1
   def update
-    if @offer.update(offer_params)
+    if @offer.update(Uploader.upload(offer_params))
       render json: @offer
     else
       render json: @offer.errors, status: :unprocessable_entity
