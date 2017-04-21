@@ -26,7 +26,7 @@ class OffersController < ApplicationController
 
   # POST /offers
   def create
-    @offer = Offer.new(offer_params)
+    @offer = Offer.new(Uploader.upload(offer_params))
 
     if @offer.save
       render json: @offer, status: :created, location: @offer
@@ -57,6 +57,6 @@ class OffersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def offer_params
-      params.require(:offer).permit(:title, :body, :user_id, :value, :image)
+      params.require(:offer).permit(:title, :body, :user_id, :value, :image,  :base64) #// get rid of image later
     end
 end

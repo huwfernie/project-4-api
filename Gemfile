@@ -20,6 +20,10 @@ gem 'puma', '~> 3.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
 
+gem 'carrierwave'
+gem 'carrierwave-base64'
+gem 'fog-aws'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
