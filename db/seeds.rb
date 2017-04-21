@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Users ---------------------------------
+[User, Advert, Offer].each do |model|
+  ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{model.table_name} RESTART IDENTITY CASCADE")
+end
 
 emily = User.create!(username: "emily", email: "e@e", phoneNumber: "078510123123", address: "133 big house, london road, london, N145T", password: "p", password_confirmation: "p")
 
@@ -30,22 +33,91 @@ Advert.create!(title: "Blender", body: "I need a new blender, top of the range",
 
 # Offers -- things for sale ------------------------
 
-offer1 = Offer.create!(title: "Bicycle", body: "I'm selling a standard 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.", user: mike, value: 145, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
+offer1 = Offer.create!(
+  title: "Bicycle",
+  body: "I'm selling a beautiful 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.",
+  user: will,
+  value: 5,
+  image: File.open(File.join(Rails.root, "db/images/bicycle.JPG"))
+  )
 
-Offer.create!(title: "Bicycle", body: "I'm selling a cheap 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.", user: mike, value: 90, image: "http://www.gioiosa.it/fileadmin/images/Active/Mountainbike/Mountainbike01.jpg" )
+Offer.create!(
+  title: "Vintage Enid Blyton Books - 26 in total",
+  body: "Vintage Enid Blyton Books - 26 in all. Swanpool area. Please contact me if you require more info.",
+  user: emily,
+  value: 15,
+  # image: "http://www.gioiosa.it/fileadmin/images/Active/Mountainbike/Mountainbike01.jpg" )
+  image: File.open(File.join(Rails.root, "db/images/enidBlyton.jpg"))
+  )
 
-Offer.create!(title: "Bicycle", body: "I'm selling an expensive beautiful 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.", user: mike, value: 200, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
+Offer.create!(
+  title: "VW T25 Trident Autosleeper White 1989 F Registration 1915cc Petrol",
+  body: "VW T25 Trident Autosleeper White 1989 F Registration. 114253 Miles. This model is the 1915cc water-cooled petrol engine and 4 speed manual gearbox. This version also has the square headlights. MOT and taxed.The van is in good condition for its age, but has some small areas of rust, in the usual places for a van of this type and age. Approximately £750 alone spent on gearbox in 2015, at a professional gearbox centre. Lots of original paperwork, old MOT's and bills collected over the years. Awning, fiamma 4 bike rack, blackout blinds and porta potti included in sale. New leisure battery recently fitted.The van is located in Falmouth, Cornwall.
+£5995 ono. Please call 07570604123",
+  user: ajay,
+  value: 5995,
+  image: File.open(File.join(Rails.root, "db/images/vw_camper.JPG"))
+  )
 
-Offer.create!(title: "bicycle", body: "I'm selling a lowercase 1987 Raleigh Granada Reynolds 531 touring bike perfect for Audax season. This bike is in excellent condition with Deep Metallic Blue paintwork and Silver headset.", user: mike, value: 190, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
+Offer.create!(
+  title: "Men's Kookaburra cricket pads",
+  body: "Men's KAHUNA 400 Kookaburra cricket pads.
+  In a lovely condition, nice and clean.",
+  user: mike,
+  value: 5,
+  image: File.open(File.join(Rails.root, "db/images/cricket_pads.JPG"))
+  )
 
-Offer.create!(title: "Blender that looks like a bicycle", body: "A blender that looks like a BIKE, I wonder if this will show up in any search results.", user: mike, value: 100, image: "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/LNkAAOSw3utY71gq/$_86.JPG" )
+Offer.create!(
+  title: "Coffee Table, Falmouth, Need Gone ASAP",
+  body: "Small Cream Vintage-style table. Extra storage area underneath. Picture is not include. £15.",
+  user: will,
+  value: 15,
+  image: File.open(File.join(Rails.root, "db/images/coffee_table.JPG"))
+  )
 
-Offer.create!(		"title": "Bicycle",
-		"body": "I'm Mike and I'm selling my bike",
-		"user_id": mike,
-		"value": 125.0,
-		"image": "http://www.gioiosa.it/fileadmin/images/Active/Mountainbike/Mountainbike01.jpg",
-		"messages": [])
+Offer.create!(
+  title: "Gretsch honeydipper resonator",
+  body: "Gretsch resonator round neck with Fishman factory fitted pickup.
+
+Very good condition. No issues.
+
+Falmouth Cornwall.",
+  user: will,
+  value: 475,
+  image: File.open(File.join(Rails.root, "db/images/guitar.JPG"))
+  )
+
+Offer.create!(
+  title: "Raleigh 531c Luxe 1987 classic road bike, men, 57cm, shimano 600 custom Reynolds",
+  body: "Raleigh 531c Luxe from 1987, with genuine Japanese sub-assemblies – Shimano 600 group. The frame is made of Reynolds 531c tubes, because of which it is very lightweight and stiff. It also features a cast bottom bracket shell made by Cinelli and Gipiemme dropouts.
+
+  The 531c Luxe was a second performance bicycle in the Raleigh hierarchy just after the 653 Race model (see catalogue page).
+
+  The classic steel frame has been freshly renovated, including sandblasting and powder-coating. The bike fashions genuine SR Sakae alloy stem, handlebars and a seat-post set-up. The bars are finished with thick leather and cork ends which go perfectly with the leather finished Italian saddle.",
+  user: will,
+  value: 749,
+  image: File.open(File.join(Rails.root, "db/images/bicycle2.JPG"))
+  )
+
+Offer.create!(
+  title: "kitchen aid blender in cream",
+  body: "# KITCHEN AID BLENDER IN CREAM MODEL NUMBER 5KSB52BAC4
+
+  No BOX or Manual...  Slight damage to blender Rubber Clutch but still works great.
+  Replacement rubber Clutch is less than £10 on ebay...
+
+  **10 SPEED COMBINATIONS ULTRA POWER BLENDER**
+  Used and in very good NEW CONDITION
+  FROM A NON-SMOKING HOME
+  NON-REFUNDABLE
+
+  Collect+ (2day Delivery) including packaging to a UK address.",
+  user: ajay,
+  value: 15,
+  image: File.open(File.join(Rails.root, "db/images/blender.JPG"))
+  )
+
 #
 # Message.create!(
 #   subject: "I saw you wanted a bicycle",
