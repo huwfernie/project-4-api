@@ -118,6 +118,14 @@ Offer.create!(
   image: File.open(File.join(Rails.root, "db/images/blender.JPG"))
   )
 
+Offer.create!(
+  title: "Ocean frenzy kayak",
+  body: "Ocean frenzy kayak, great fun boat for all the family, can hold large adults but manageable for kids as well. Comes with ocean seat and a paddle. Has usual marks from landing on the beach but is ready to go for the summer",
+  user: ajay,
+  value: 180,
+  image: File.open(File.join(Rails.root, "db/images/kayak.JPG"))
+  )
+
 #
 # Message.create!(
 #   subject: "I saw you wanted a bicycle",
