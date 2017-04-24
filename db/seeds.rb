@@ -46,14 +46,19 @@ Offer.create!(
   body: "Vintage Enid Blyton Books - 26 in all. Swanpool area. Please contact me if you require more info.",
   user: emily,
   value: 15,
-  # image: "http://www.gioiosa.it/fileadmin/images/Active/Mountainbike/Mountainbike01.jpg" )
   image: File.open(File.join(Rails.root, "db/images/enidBlyton.JPG"))
   )
 
 Offer.create!(
   title: "VW T25 Trident Autosleeper White 1989 F Registration 1915cc Petrol",
-  body: "VW T25 Trident Autosleeper White 1989 F Registration. 114253 Miles. This model is the 1915cc water-cooled petrol engine and 4 speed manual gearbox. This version also has the square headlights. MOT and taxed.The van is in good condition for its age, but has some small areas of rust, in the usual places for a van of this type and age. Approximately £750 alone spent on gearbox in 2015, at a professional gearbox centre. Lots of original paperwork, old MOT's and bills collected over the years. Awning, fiamma 4 bike rack, blackout blinds and porta potti included in sale. New leisure battery recently fitted.The van is located in Falmouth, Cornwall.
-£5995 ono. Please call 07570604123",
+  body: "VW T25 Trident Autosleeper White 1989 F Registration. 114253 Miles.
+
+  This model is the 1915cc water-cooled petrol engine and 4 speed manual gearbox. This version also has the square headlights. MOT and taxed.The van is in good condition for its age, but has some small areas of rust, in the usual places for a van of this type and age.
+
+  Approximately 750 pounds alone spent on gearbox in 2015, at a professional gearbox centre. Lots of original paperwork, old MOT's and bills collected over the years. Awning, fiamma 4 bike rack, blackout blinds and porta potti included in sale. New leisure battery recently fitted.
+
+  The van is located in Falmouth, Cornwall.
+  5995 ono. Please call 07570604123",
   user: ajay,
   value: 5995,
   image: File.open(File.join(Rails.root, "db/images/vw_camper.JPG"))
@@ -70,7 +75,7 @@ Offer.create!(
 
 Offer.create!(
   title: "Coffee Table, Falmouth, Need Gone ASAP",
-  body: "Small Cream Vintage-style table. Extra storage area underneath. Picture is not include. £15.",
+  body: "Small Cream Vintage-style table. Extra storage area underneath. Picture is not include. 15",
   user: will,
   value: 15,
   image: File.open(File.join(Rails.root, "db/images/coffee_table.JPG"))
@@ -90,7 +95,7 @@ Falmouth Cornwall.",
 
 Offer.create!(
   title: "Raleigh 531c Luxe 1987 classic road bike, men, 57cm, shimano 600 custom Reynolds",
-  body: "Raleigh 531c Luxe from 1987, with genuine Japanese sub-assemblies – Shimano 600 group. The frame is made of Reynolds 531c tubes, because of which it is very lightweight and stiff. It also features a cast bottom bracket shell made by Cinelli and Gipiemme dropouts.
+  body: "Raleigh 531c Luxe from 1987, with genuine Japanese sub-assemblies \- Shimano 600 group. The frame is made of Reynolds 531c tubes, because of which it is very lightweight and stiff. It also features a cast bottom bracket shell made by Cinelli and Gipiemme dropouts.
 
   The 531c Luxe was a second performance bicycle in the Raleigh hierarchy just after the 653 Race model (see catalogue page).
 
@@ -102,10 +107,10 @@ Offer.create!(
 
 Offer.create!(
   title: "kitchen aid blender in cream",
-  body: "# KITCHEN AID BLENDER IN CREAM MODEL NUMBER 5KSB52BAC4
+  body: "KITCHEN AID BLENDER IN CREAM MODEL NUMBER 5KSB52BAC4
 
   No BOX or Manual...  Slight damage to blender Rubber Clutch but still works great.
-  Replacement rubber Clutch is less than £10 on ebay...
+  Replacement rubber Clutch is less than 10 pounds on ebay...
 
   **10 SPEED COMBINATIONS ULTRA POWER BLENDER**
   Used and in very good NEW CONDITION
