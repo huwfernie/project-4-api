@@ -46,7 +46,7 @@ Offer.create!(
   body: "Vintage Enid Blyton Books - 26 in all. Swanpool area. Please contact me if you require more info.",
   user: emily,
   value: 15,
-  image: File.open(File.join(Rails.root, "db/images/enidBlyton.JPG"))
+  image: File.open(File.join(Rails.root, "db/images/enid.JPG"))
   )
 
 Offer.create!(
