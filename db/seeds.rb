@@ -47,7 +47,7 @@ Offer.create!(
   user: emily,
   value: 15,
   # image: "http://www.gioiosa.it/fileadmin/images/Active/Mountainbike/Mountainbike01.jpg" )
-  image: File.open(File.join(Rails.root, "db/images/enidBlyton.jpg"))
+  image: File.open(File.join(Rails.root, "db/images/enidBlyton.JPG"))
   )
 
 Offer.create!(
