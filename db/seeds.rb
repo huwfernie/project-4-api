@@ -120,7 +120,7 @@ Offer.create!(
   Collect+ (2day Delivery) including packaging to a UK address.",
   user: ajay,
   value: 15,
-  image: File.open(File.join(Rails.root, "db/images/blender.JPG"))
+  image: File.open(File.join(Rails.root, "db/images/blend.JPG"))
   )
 
 Offer.create!(
