@@ -1,5 +1,6 @@
 class AdvertSerializer < ActiveModel::Serializer
   has_many :messages
+  belongs_to :user
   attributes :id, :title, :body, :user_id, :valueMax, :valueMin, :html_body
 
   PARSER = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
