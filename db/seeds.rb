@@ -102,7 +102,7 @@ Offer.create!(
   The classic steel frame has been freshly renovated, including sandblasting and powder-coating. The bike fashions genuine SR Sakae alloy stem, handlebars and a seat-post set-up. The bars are finished with thick leather and cork ends which go perfectly with the leather finished Italian saddle.",
   user: will,
   value: 749,
-  image: File.open(File.join(Rails.root, "db/images/bicycle2.JPG"))
+  image: File.open(File.join(Rails.root, "db/images/bicycletwo.JPG"))
   )
 
 Offer.create!(
