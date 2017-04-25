@@ -8,6 +8,17 @@ class AdvertsController < ApplicationController
     render json: @adverts
   end
 
+  # This is Huws search method
+  def search
+    @adverts = []
+    query = (params[:search])
+    query.split(' ').each do |keyword|
+      @adverts += Advert.where("title ILIKE :search", { search: "%#{keyword}%" })
+    end
+    render json: @adverts
+  end
+  # This is back to the normal Rails api below.
+
   # GET /adverts/1
   def show
     render json: @advert
