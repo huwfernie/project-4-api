@@ -11,9 +11,10 @@ class UsersController < ApplicationController
   # GET /users/1
   def show
     if @user == current_user
-      render json: @user
+      render json: @user, include: ['messages.sender','messages.reciever', 'offers', 'adverts']
     else
       render json: 'Unauthorized'
+      # render json: @user, include: ['messages.sender','messages.reciever', 'offers', 'adverts']
     end
   end
 
