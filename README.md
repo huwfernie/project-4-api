@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the backend for the project-4-frontend in my GitHub account. See that readme for more details on the project.
 
-Things you may want to cover:
+## Backend:
 
-* Ruby version
+The whole backend is built with Ruby on rails serving JSON data. all gems are in the gemfile so if you want to clone the repo and run `$ gem install` followed by `$ Rails s` you should be able to access the data on `http://localhost:3000`.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The database uses PostgreSQL, so that will need to be running first.
